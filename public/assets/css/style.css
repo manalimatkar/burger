@@ -4,11 +4,10 @@ body{
 ul{
     
     list-style-type: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
 }
 li {
-  background: #FAEBD7;
-  margin: 5px;
+  margin: 2px;
   padding: 5px;
 }
 input{
@@ -29,4 +28,9 @@ input{
 .form-group {
   margin-bottom: 5px;
 }
+.img-burger {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
 

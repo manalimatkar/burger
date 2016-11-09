@@ -1,13 +1,14 @@
 <div class="container text-center">
-  <h1>Burgers!</h1>
+  <img src="/assets/img/hamburger-icon.png" class="img-burger" width="200" height="200"/>
+  <hr>
   <div class="row">
     <div class="col-md-6"  id="noteaten">
-      <h2>Burgers On Menu!!</h2>
+      <h3>Burgers On Menu!!</h3>   
       <ul>
         {{#each burgers}}
           {{#unless this.devoured}}
             <li> <h3>{{this.id}}.{{this.burger_name}}</h3>
-              <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+              <form class="form-inline" action="burgers/update/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
                 <button type="submit" class="btn btn-default">Devourer!</button>
               </form>
@@ -17,10 +18,11 @@
       </ul>
     </div>
     <div class="col-md-6" id="eaten">
+      <h3>Burgers Eaten!!</h3>    
       <ul>
         {{#each burgers}}
           {{#if this.devoured}}
-            <li>{{this.id}}.{{this.burger_name}}</li>      
+            <li>{{this.id}}.{{this.burger_name}}.....Yummmmmm</li>      
           {{/if}}
         {{/each}}
       </ul>
@@ -29,12 +31,12 @@
   <div class="row">
     <div class="col-md-12">
       <h2>Add a Burger</h2>
-      <form class="create-update-form" action="burgers/create" method="POST">
+      <form class="create-update-form form-inline" action="burgers/create" method="POST">
         <div class="form-group">
           <label for="burger">Burger Name:</label>
           <input type="text" id="burger" name="name">    
         </div>
-        <button type="submit">Add Burger</button>
+        <button type="submit" class="btn btn-default">Add Burger</button>
       </form>
     </div>
 </div>

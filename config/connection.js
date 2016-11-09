@@ -1,6 +1,5 @@
 // Create the connection to the database and export to be used by the O.R.M.
 var mysql = require('mysql');
-
 var connection;
 
 if (process.env.JAWSDB_URL) {

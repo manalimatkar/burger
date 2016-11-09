@@ -6,14 +6,14 @@ var connection;
 if (process.env.JAWSBD_URL) {
     connection = mysql.createConnection(process.env.JAWSBD_URL);
 } else {
-    mysql.createConnection({
+   connection = mysql.createConnection({
         port: 3306,
         host: 'localhost',
         user: 'root',
         password: 'monalisa79',
         database: 'burgers_db'
     });
-};
+}
 
 connection.connect();
 module.exports = connection;

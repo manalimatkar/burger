@@ -11,7 +11,7 @@ app.use(express.static(process.cwd() + '/public'));
 
 // use body parser for urlencodeing
 app.use(bodyParser.urlencoded({
-	extended: false
+    extended: false
 }));
 
 // override with POST having ?_method=DELETE
@@ -20,7 +20,7 @@ app.use(methodOverride('_method'));
 // assign handlebars to app engine and set view engine to use handlebars
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
-	defaultLayout: 'main'
+    defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 
